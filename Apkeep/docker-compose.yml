@@ -1,0 +1,55 @@
+# ============================================================
+# APKeep Dashboard — Docker Compose
+# ============================================================
+# Usage:
+#   docker compose up -d          → build + start in background
+#   docker compose logs -f        → watch live logs
+#   docker compose down           → stop container
+#   docker compose down -v        → stop + remove volumes
+#   docker compose up -d --build  → rebuild after code changes
+#   docker compose ps             → check status
+#
+# Open browser at: http://localhost:8080
+# APKs saved to : ./downloads/ folder (auto-created)
+# ============================================================
+
+services:
+  apkeep-dashboard:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    container_name: apkeep-dashboard
+
+    # Host port 8080 → container port 8080
+    ports:
+      - "8080:8080"
+
+    volumes:
+      # ── Output: APKs are saved here on your host machine ──
+      # Auto-created if it doesn't exist
+      - ./downloads:/app/downloads
+
+    environment:
+      # Tells the app it's running in Docker (disables browser auto-open)
+      - DOCKER_ENV=true
+      # APKs will be saved to this path inside the container
+      - APK_OUT_DIR=/app/downloads
+
+    # Auto-restart on reboot or crash
+    restart: unless-stopped
+
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 15s
+
+    # Optional resource limits — adjust to your machine
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+        reservations:
+          memory: 128M
