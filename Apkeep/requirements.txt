@@ -1,0 +1,44 @@
+# ============================================================
+# APKeep Dashboard — Requirements
+# ============================================================
+#
+# ─── Recommended: Run via Docker (zero manual setup) ─────────
+#
+#   docker compose up -d
+#
+#   Docker handles Python, apkeep, and all dependencies
+#   automatically. No manual installs needed.
+#
+# ─── Manual / Native run ─────────────────────────────────────
+#
+# Python >= 3.6 required.
+# NO pip packages needed — standard library only.
+#
+# Standard library modules used internally:
+#   os, sys, json, shutil, zipfile, platform, subprocess,
+#   threading, http.server, urllib.parse, urllib.request,
+#   re, time, pathlib
+#
+# ─── External binary required ────────────────────────────────
+#
+# apkeep must be installed separately (not a Python package).
+#
+#   Option A — pre-built binary (no Rust needed):
+#     https://github.com/EFForg/apkeep/releases
+#
+#   Option B — via Cargo:
+#     cargo install apkeep
+#
+#   Option C — Docker (auto-installed inside container):
+#     docker compose up -d
+#
+# ─── Optional Python packages (dev page scraper only) ────────
+#
+# requests>=2.28.0
+# beautifulsoup4>=4.11.0
+#
+# Install with:
+#   pip install requests beautifulsoup4
+#   pip install -r requirements.txt
+#
+# ============================================================
