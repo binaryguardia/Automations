@@ -1,4 +1,7 @@
 # PhishGuard India v3.0 — Setup & Run Guide
+
+<img width="1910" height="913" alt="image" src="https://github.com/user-attachments/assets/f0a1c005-a50a-4695-9fb9-71f2a5751d40" />
+
 ## ONE LINE START
 ```
 git clone https://github.com/binaryguardia/Automations.git
