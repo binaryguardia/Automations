@@ -147,8 +147,8 @@ pkg update && pkg install apkeep
 
 **Option A — Git clone:**
 ```bash
-git clone https://github.com/yourusername/apkeep-dashboard.git
-cd apkeep-dashboard
+git clone https://github.com/binaryguardia/Automations.git
+cd Automations/Apkeep
 ```
 
 **Option B — Manual download:**
