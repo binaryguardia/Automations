@@ -1,6 +1,10 @@
-# PhishGuard India v2.0 — Setup & Run Guide
-==========================================
-
+# PhishGuard India v3.0 — Setup & Run Guide
+## ONE LINE START
+```
+git clone https://github.com/binaryguardia/Automations.git
+cd Automations/Phishguard
+sudo bash start.sh
+```
 ## QUICK START (3 steps)
 
 ### Step 1 — Install Python dependencies
