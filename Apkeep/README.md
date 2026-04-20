@@ -4,7 +4,6 @@ A cross-platform, browser-based dashboard for bulk downloading APK files from Go
 
 No credentials required for APKPure downloads. No pip packages required.
 
----
 <img width="690" height="388" alt="image" src="https://github.com/user-attachments/assets/78f89f3d-a4ea-4958-9f2d-ac5db47e0ee9" />
 
 ## 📁 Project Files
